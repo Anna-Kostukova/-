@@ -11,12 +11,12 @@ Console.Clear();
 // Console.SetCursorPosition(10, 4);  // расположение точки на консоли
 // Console.WriteLine("+");  // рисовать будем крестиком
 
-int xa = 1;  // определить три точки
-int xb = 1;
-int yb = 10;
-int ya = 1;              
-int xc = 20;
-int yc = 10;
+int xa = 2;  // определить три точки
+int ya = 20;
+int xb = 20;
+int yb = 2; 
+int xc = 40;
+int yc = 20;
 
 Console.SetCursorPosition(xa, ya);
 Console.WriteLine("+");
@@ -26,3 +26,33 @@ Console.WriteLine("+");
 
 Console.SetCursorPosition(xc, yc);
 Console.WriteLine("+");
+
+int x = xa, y = xb; // задаем случайную вершину треугольника (5)
+
+int count = 0; // задаем количество раз прохождения цикла (8)
+
+while (count < 5000)
+{
+    int what = new Random().Next(0, 3); // 0 1 2 - случайная вершина
+    if(what == 0)
+    {
+        x = (x + xa) / 2;
+        y = (y + ya) / 2;
+    }
+
+    if(what == 1)
+    {
+        x = (x + xb) / 2;
+        y = (y + yb) / 2;
+    }
+
+    if(what == 2)
+    {
+        x = (x + xc) / 2;
+        y = (y + yc) / 2;
+    } 
+
+    Console.SetCursorPosition(x, y); 
+    Console.WriteLine("+");
+    count++; // чтобы цикл не ушел в бесконечность, шаг 1
+}
