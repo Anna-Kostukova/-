@@ -12,16 +12,16 @@
 
 int[] array = {1,2,3,4,5,6,9,78};
 
-int n =array.Length; //  n = длинна или кол-во эл-тов в массиве
-int find = 9; 
+int n =array.Length; //  n = длина или кол-во эл-тов в массиве
+int find = 9; // необходимо найти индекс значения 9
 
 int index = 0; 
 
 while(index < n)
 {
-    if (array[index] == find)
+    if (array[index] == find) // если значение находится
     {
-        Console.WriteLine(index);
+        Console.WriteLine(index); // выводим на консоль индекс этого значения
         break; // находим первый элемент и завершаем работу
     }
     index++;
