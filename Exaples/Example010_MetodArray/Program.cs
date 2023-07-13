@@ -17,12 +17,12 @@ int find = 9; // необходимо найти индекс значения 9
 
 int index = 0; 
 
-while(index < n)
+while(index < n) // если индекс меньше n
 {
-    if (array[index] == find) // если значение находится
+    if (array[index] == find) // если индекс совпал с нужным значением (find)
     {
         Console.WriteLine(index); // выводим на консоль индекс этого значения
         break; // находим первый элемент и завершаем работу
     }
-    index++;
+    index++; // шаг 1
 }
