@@ -5,34 +5,34 @@
 // 3. Повторять пока есть не отсортированные
 // элементы
 
-int[] arr = {1, 6, 4, 4, 9, 2};
+int[] arr = { 1, 6, 4, 4, 9, 2 }; // заведем массив
 
-void PrintArray(int[] array)
+void PrintArray(int[] array) // метод вывода массива
 {
-    int count = array.Length;
-    for (int i = 0; i < count; i++)
+    int count = array.Length; // count равен длине массива
+    for (int i = 0; i < count; i++) // начнем с 0 и до конца массива с шагом 1
     {
-        Console.Write($"{array[i]} ");
+        Console.Write($"{array[i]} "); // выведем на консоль наш массив
     }
-    Console.WriteLine();
+    Console.WriteLine(); // выводим на консоль пустую строку
 }
 
-void SelectionSort(int[] array)
+void SelectionSort(int[] array) // метод упорядочивания массива
 {
-    for (int i = 0; i < array.Length -1; i++)
+    for (int i = 0; i < array.Length - 1; i++) // пройдем по всему массиву 
     {
-      int minPosition = i;
-      
-      for (int j = i + 1; j < array.Length; j++)
-      {
-        if (array[j] < array[minPosition]) minPosition = j;
-      }
-    int temporary = array[i];
-    array[i] = array[minPosition];
-    array[minPosition] = temporary;
+        int minPosition = i; // запоминаем позицию
+
+        for (int j = i + 1; j < array.Length; j++) // ищем минимальный элемент с i+1 позиции
+        {
+            if (array[j] < array[minPosition]) minPosition = j; // если текущий меньше минимальной позиции
+        }
+        int temporary = array[i]; // меняем значение нашей минимальной позиции с той позицией которую нашли
+        array[i] = array[minPosition]; // в i позицию положим тот элемент который был найден
+        array[minPosition] = temporary; // в минимальную позицию кладем элемент, который был временным 
     }
 }
-PrintArray(arr);
-SelectionSort(arr);
+PrintArray(arr); // выводим на консоль наш массив
 
-PrintArray(arr);
+SelectionSort(arr); // получаем упорядоченный массив
+PrintArray(arr); // выводим на консоль упорядоченный массив
