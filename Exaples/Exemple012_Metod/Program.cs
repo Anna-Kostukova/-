@@ -1,12 +1,4 @@
-﻿// Дан текст. В тексте нужно все пробелы заменить черточками,
-// маленькие буквы “к” заменить большими “К”, а большие “С” заменить
-// маленькими “с”.
-// — Я думаю, — сказал князь, улыбаясь, — что,
-// ежели бы вас послали вместо нашего милого
-// Винценгероде, вы бы взяли приступом согласие
-// прусского короля. Вы так красноречивы. Вы
-// дадите мне чаю?
-
+﻿
 // Вид 1 ничего не принимают, ничего не возвращают
 void Method1() 
 {
@@ -43,16 +35,16 @@ int year = Method3();
 // Console.WriteLine(year);
 
 // Вид 4 что-то принимают и что-то возвращают
-string Method4(int count, string text)
+string Method4(int count, string text) // передаем текст какое-то (count) количество раз
 {
     int i = 0;
     string result = String.Empty;
-       while (i < count)
-       {
+    while (i < count)
+    {
         result = result + text;
         i++;
-       }
-       return result;
+    }
+    return result;
 }
 string res = Method4(10, "qwerty ");
 // Console.WriteLine(res);
