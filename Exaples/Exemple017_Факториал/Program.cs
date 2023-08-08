@@ -9,7 +9,7 @@ double Factorial(int n)
     else return n * Factorial(n - 1);
 }
 
-for (int i = 0; i < 5; i++)
+for (int i = 1; i < 7; i++)
 {
     Console.WriteLine($"{i}! = {Factorial(i)}");
 }
