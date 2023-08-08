@@ -25,20 +25,21 @@
 {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
 };
 
-void PrintImage(int[,] image)
+void PrintImage(int[,] image) // печатаем картинку
 {
     for (int i = 0; i < image.GetLength(0); i++)
     {
         for (int j = 0; j < image.GetLength(1); j++)
         {
-            if (image[i,j] == 0) Console.Write($" ");
-            else Console.Write($"+");
+            if (image[i,j] == 0) Console.Write($" "); // если текущий элемент image[i,j] 
+                                                    //совпадает с 0, то мы печатаем пробел
+            else Console.Write($"+"); // иначе распечатаем "+"
         }
         Console.WriteLine();
     }
 }
 
-void FillImage(int row, int col)
+void FillImage(int row, int col) // метод закрашивания картинки
 {
  if (pic[row, col] == 0)
  {
@@ -50,7 +51,7 @@ void FillImage(int row, int col)
  }
 }
 PrintImage(pic);
-FillImage(13, 13);
+FillImage(13, 13); // случайная точка, с которой начнем закрашивание
 PrintImage(pic);
 
 
